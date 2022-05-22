@@ -25,13 +25,14 @@
             android:layout_weight="6"
             android:hint="yup"
             android:minHeight="48dp" />
-        <Button
+        <ImageButton
             android:id="@+id/button_message_send"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/SendMessageStyle"
-            
+            android:background="@drawable/send_message_oval"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
             android:text="yup" />
     </LinearLayout>
 </LinearLayout>
