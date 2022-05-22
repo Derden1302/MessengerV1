@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SendMessageStyle" >
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="background">@drawable/send_message_oval</item>
+    </style>
+
+</resources>
+
