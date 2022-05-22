@@ -2,7 +2,7 @@
 <resources>
 
     <style name="SendMessageStyle" >
-        <item name="android:textColor">#FFFFFF</item>
+
         <item name="background">@drawable/send_message_oval</item>
 
     </style>
@@ -15,5 +15,11 @@
     </style>
     <style name="NotMeStyleBox">
     </style>
+
+    <style name="Back">
+        <item name="android:background">#fffecb </item>
+    </style>
+
+
 </resources>
 

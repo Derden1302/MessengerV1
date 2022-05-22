@@ -4,6 +4,7 @@ import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val msgs = ArrayList<String>()
         val dates = ArrayList<String>()
 
-        val ButtonSendMsg: Button = findViewById(R.id.button_message_send)
+        val ButtonSendMsg: ImageButton = findViewById(R.id.button_message_send)
         val RecyclerViewMsg: RecyclerView  = findViewById(R.id.recycler_view)
         val EditTextWriteMsg: EditText = findViewById(R.id.edit_text_message_write)
 
@@ -29,12 +30,15 @@ class MainActivity : AppCompatActivity() {
 
         ButtonSendMsg.setOnClickListener {
             val message = EditTextWriteMsg.text.toString()
-            val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+            val sdf = SimpleDateFormat("dd/M/yyyy hh:mm")
             val currentDate = sdf.format(Date())
-            msgs.add(message)
-            dates.add(currentDate)
-            dataAdapter.notifyDataSetChanged()
-            EditTextWriteMsg.setText("")
+            if (message != "" ){
+                msgs.add(message)
+                dates.add(currentDate)
+                dataAdapter.notifyDataSetChanged()
+                EditTextWriteMsg.setText("")
+            }
+
         }
     }
 }
